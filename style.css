@@ -1,0 +1,298 @@
+/* ==========================================================
+   Colour scheme (3 colours only)
+   ink   = deep navy, main colour
+   paper = cool off-white, background and light text
+   gold  = accent, used for highlights and hover states
+   ========================================================== */
+:root {
+  --ink: #12263a;
+  --paper: #f3f6f8;
+  --gold: #e3a72f;
+
+  --font-heading: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+  margin: 0;
+}
+
+p {
+  margin: 0 0 1rem;
+  max-width: 62ch;
+}
+
+a {
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- Accessibility ---------- */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -4rem;
+  z-index: 10;
+  padding: 0.6rem 1rem;
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.section-light a:focus-visible {
+  outline-color: var(--ink);
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 1.25rem 0 3.5rem;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.5rem;
+  padding-bottom: 3rem;
+}
+
+.nav a {
+  padding: 0.35rem 0;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+.hero-body {
+  padding-left: 1rem;
+  border-left: 6px solid var(--gold);
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 8.5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  overflow-wrap: anywhere;
+}
+
+.tagline {
+  margin: 1rem 0 0;
+  font-size: 1.125rem;
+  max-width: 34ch;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 3.5rem 0;
+}
+
+.section h2 {
+  font-size: clamp(1.6rem, 6vw, 2.25rem);
+  margin-bottom: 1.5rem;
+}
+
+.section-light {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.section-dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* ---------- Skills ---------- */
+.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.875rem;
+}
+
+.skills li {
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  border: 2px solid var(--gold);
+  border-left-width: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.skills li:hover {
+  background: var(--gold);
+  color: var(--ink);
+  transform: translateX(6px);
+}
+
+/* ---------- Projects ---------- */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.card {
+  padding: 1.5rem 1.25rem;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-top: 8px solid var(--gold);
+  transition: background-color 0.25s ease, color 0.25s ease,
+              transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card:hover {
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 0 var(--gold);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 1.75rem 0;
+  border-top: 6px solid var(--gold);
+}
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.to-top {
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.to-top:hover {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
+}
+
+/* ---------- Tablet and up ---------- */
+@media (min-width: 40rem) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .hero {
+    padding: 1.75rem 0 5rem;
+  }
+
+  .hero-body {
+    padding-left: 1.5rem;
+  }
+
+  .section {
+    padding: 5rem 0;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    padding: 1.75rem;
+  }
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 60rem) {
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+
+  .skills li:hover,
+  .card:hover {
+    transform: none;
+  }
+}
