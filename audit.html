@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio audit | ISHA PRAJAPAT</title>
+  <meta name="description" content="Audit of the ISHA PRAJAPAT portfolio page against the Session 9 requirements.">
+  <link rel="stylesheet" href="audit.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#results">Skip to results</a>
+
+  <header class="hero">
+    <div class="container">
+      <nav class="nav" aria-label="Audit sections">
+        <a href="#results">Results</a>
+        <a href="#fixes">Fixes</a>
+        <a href="#content">Content check</a>
+        <a href="#method">Method</a>
+      </nav>
+
+      <div class="hero-body">
+        <h1>Portfolio audit</h1>
+        <p class="tagline">
+          Session 9 requirements checked against the portfolio of ISHA PRAJAPAT.
+          Audited on 19 September 2026.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section section-light" aria-labelledby="summary-title">
+      <div class="container">
+        <h2 id="summary-title">Summary</h2>
+        <div class="summary">
+          <p class="summary-item"><strong>9 of 9</strong> requirements now pass</p>
+          <p class="summary-item"><strong>2</strong> violations found and fixed</p>
+          <p class="summary-item"><strong>0</strong> open issues</p>
+        </div>
+        <p class="note">
+          The portfolio itself is unchanged in design. Only the violations listed below were fixed.
+          <a class="text-link" href="../index.html">Open the portfolio</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="results" class="section section-dark">
+      <div class="container">
+        <h2>Requirement results</h2>
+        <ol class="results">
+
+          <li class="result">
+            <div class="result-head">
+              <h3>Exactly one h1 with the name ISHA PRAJAPAT</h3>
+              <span class="badge badge-fixed">Fixed</span>
+            </div>
+            <p>
+              The page has one <code>&lt;h1&gt;</code> and it reads ISHA PRAJAPAT.
+              An earlier version of the file showed a different name in the h1, page title,
+              meta description and footer. All four were replaced, and a search finds no other name.
+            </p>
+          </li>
+
+          <li class="result">
+            <div class="result-head">
+              <h3>About section</h3>
+              <span class="badge badge-pass">Pass</span>
+            </div>
+            <p>
+              A section with the id <code>about</code> and the heading "About", followed by two short paragraphs.
+            </p>
+          </li>
+
+          <li class="result">
+            <div class="result-head">
+              <h3>Skills section with exactly 5 skills</h3>
+              <span class="badge badge-pass">Pass</span>
+            </div>
+            <p>
+              Prompt Engineering, AI &amp; ML, EDA, ML Model Development and Data Visualization.
+              No extra skills are listed.
+            </p>
+          </li>
+
+          <li class="result">
+            <div class="result-head">
+              <h3>Projects: Student Attrition Prediction and NoBrokerage.com Chatbot</h3>
+              <span class="badge badge-pass">Pass</span>
+            </div>
+            <p>
+              Both projects appear as separate cards, and no other projects are listed.
+            </p>
+          </li>
+
+          <li class="result">
+            <div class="result-head">
+              <h3>HTML and CSS remain separate</h3>
+              <span class="badge badge-pass">Pass</span>
+            </div>
+            <p>
+              All markup is in <code>index.html</code> and all styling is in <code>style.css</code>,
+              linked once from the head of the page.
+            </p>
+          </li>
+
+          <li class="result">
+            <div class="result-head">
+              <h3>No inline CSS</h3>
+              <span class="badge badge-pass">Pass</span>
+            </div>
+            <p>
+              The HTML has no <code>style</code> attributes and no <code>&lt;style&gt;</code> tags.
+              It also has no scripts.
+            </p>
+          </li>
+
+          <li class="result">
+            <div class="result-head">
+              <h3>Visible hover effects</h3>
+              <span class="badge badge-pass">Pass</span>
+            </div>
+            <p>
+              Tested in a browser. Skill tiles fill with gold, project cards switch to a navy
+              background with light text, and navigation links turn gold with an underline.
+            </p>
+          </li>
+
+          <li class="result">
+            <div class="result-head">
+              <h3>Responsive at about 375px</h3>
+              <span class="badge badge-pass">Pass</span>
+            </div>
+            <p>
+              At 375px and at 320px the page is exactly as wide as the screen, so nothing scrolls
+              sideways, and the name stays on one line. Skills and projects use one column at
+              375px and two columns at 768px.
+            </p>
+          </li>
+
+          <li class="result">
+            <div class="result-head">
+              <h3>No invented personal information</h3>
+              <span class="badge badge-fixed">Fixed</span>
+            </div>
+            <p>
+              The page has no email, phone number, social media link, GitHub URL or any other external
+              link. Two project descriptions had made claims that were never provided, and they
+              were shortened to what the project names support.
+            </p>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <section id="fixes" class="section section-light">
+      <div class="container">
+        <h2>Fixes made</h2>
+        <ul class="fixes">
+          <li class="fix">
+            <h3>Name corrected in four places</h3>
+            <p>
+              The h1, page title, meta description and footer now use ISHA PRAJAPAT.
+            </p>
+          </li>
+          <li class="fix">
+            <h3>Student Attrition Prediction description shortened</h3>
+            <p>
+              Now reads "A machine learning project on predicting student attrition." The claim
+              about identifying students at risk was removed.
+            </p>
+          </li>
+          <li class="fix">
+            <h3>NoBrokerage.com Chatbot description shortened</h3>
+            <p>
+              Now reads "A chatbot project for NoBrokerage.com." The claim about how the chatbot
+              answers users was removed.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="content" class="section section-dark">
+      <div class="container">
+        <h2>Content check</h2>
+        <p class="note-dark">
+          These items were confirmed as true by the page owner. They cannot be checked from the files alone.
+        </p>
+        <ul class="content-list">
+          <li class="content-row">
+            <span class="content-name">Name: ISHA PRAJAPAT</span>
+            <span class="badge badge-pass">Confirmed by owner</span>
+          </li>
+          <li class="content-row">
+            <span class="content-name">About section</span>
+            <span class="badge badge-pass">Confirmed by owner</span>
+          </li>
+          <li class="content-row">
+            <span class="content-name">The five listed skills</span>
+            <span class="badge badge-pass">Confirmed by owner</span>
+          </li>
+          <li class="content-row">
+            <span class="content-name">The two listed projects</span>
+            <span class="badge badge-pass">Confirmed by owner</span>
+          </li>
+          <li class="content-row">
+            <span class="content-name">Email and social links</span>
+            <span class="badge badge-none">None on the page</span>
+          </li>
+          <li class="content-row">
+            <span class="content-name">GitHub links</span>
+            <span class="badge badge-none">None on the page</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="method" class="section section-light">
+      <div class="container">
+        <h2>How it was checked</h2>
+        <p>
+          The HTML and CSS files were searched for headings, inline styles, scripts, external links,
+          contact details and other names. The page was then opened in a headless Chromium browser
+          at widths of 375px, 320px and 768px to measure page width, count columns and test
+          hover states.
+        </p>
+        <p>
+          If a real email, GitHub or social link is added later, open each link once to confirm it works,
+          then run this audit again.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Audit for the ISHA PRAJAPAT portfolio</p>
+      <a class="to-top" href="#">Back to top</a>
+    </div>
+  </footer>
+
+</body>
+</html>
